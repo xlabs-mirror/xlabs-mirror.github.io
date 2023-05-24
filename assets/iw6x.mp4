@@ -15,8 +15,8 @@
 
     <title>Page not found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="/web/20230522223856cs_/https://archive.org/about/css/ia.css?v=1" rel="stylesheet" type="text/css"/>
-    <link rel="SHORTCUT ICON" href="https://web.archive.orghttps://archive.org/images/glogo.jpg"/>
+    <link href="https://archive.org/about/css/ia.css?v=1" rel="stylesheet" type="text/css"/>
+    <link rel="SHORTCUT ICON" href="https://archive.org/images/glogo.jpg"/>
   </head>
   <body class="navia">
     <a href="#maincontent" class="hidden-for-screen-readers">Skip to main content</a>
@@ -77,7 +77,7 @@
           <h1>Page not found</h1>
           We're sorry, the page you have requested is not available.
           <div id="wb404"></div>
-          <script src="https://web.archive.org/web/20230522223856js_/https://archive.org/web/wb404.js"></script>
+          <script src="https://archive.org/web/wb404.js"></script>
 
         </div>
       </main>
