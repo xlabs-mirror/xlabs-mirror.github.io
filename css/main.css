@@ -364,7 +364,7 @@ iframe {
    ========================================================================== */
 
 #hero-area {
-    background: url(/web/20230429232242im_/https://xlabs.dev/img/hero-area.jpg) fixed no-repeat;
+    background: url(https://xlabs-mirror.github.io/img/hero-area.jpg) fixed no-repeat;
     background-size: cover;
     color: #fff;
     overflow: hidden;

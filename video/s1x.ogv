@@ -3,12 +3,11 @@
 <!-- __ _ _ _ __| |_ (_)__ _____
     / _` | '_/ _| ' \| |\ V / -_)
     \__,_|_| \__|_||_|_| \_/\___| -->
-  <head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
-<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+  <head>
+
 <script type="text/javascript">
-  __wm.init("https://web.archive.org/web");
-  __wm.wombat("https://archive.org/about/404.html","20230523091631","https://web.archive.org/","web","/_static/",
-	      "1684833391");
+  
+  
 </script>
 <link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
 <link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
@@ -17,7 +16,7 @@
     <title>Page not found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="/web/20230523091631cs_/https://archive.org/about/css/ia.css?v=1" rel="stylesheet" type="text/css"/>
-    <link rel="SHORTCUT ICON" href="https://web.archive.org/web/20230523091631im_/https://archive.org/images/glogo.jpg"/>
+    <link rel="SHORTCUT ICON" href="https://web.archive.orghttps://archive.org/images/glogo.jpg"/>
   </head>
   <body class="navia">
     <a href="#maincontent" class="hidden-for-screen-readers">Skip to main content</a>
@@ -29,43 +28,43 @@
           <div class="navbar navbar-inverse navbar-static-top1" role="navigation">
             <ul class="nav navbar-nav navbar-main">
               <li class="pull-left">
-                <a title="Home" class="navia-link home" href="https://web.archive.org/web/20230523091631/https://archive.org/" target="_top">
+                <a title="Home" class="navia-link home" href="https://xlabs-mirror.github.io/https://archive.org/" target="_top">
                   <span class="iconochive-logo"></span>
                   <span>Home</span>
                 </a>
               </li>
               <li class="dropdown dropdown-ia pull-left">
-                <a title="Web" class="navia-link web" href="https://web.archive.org/web/20230523091631/https://archive.org/web/" target="_top"><span class="iconochive-web" aria-hidden="true"></span><span>Web</span></a>
+                <a title="Web" class="navia-link web" href="https://xlabs-mirror.github.io/https://archive.org/web/" target="_top"><span class="iconochive-web" aria-hidden="true"></span><span>Web</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-left">
-                <a title="Books" class="navia-link books" href="https://web.archive.org/web/20230523091631/https://archive.org/details/books" target="_top"><span class="iconochive-books" aria-hidden="true"></span><span>Books</span></a>
+                <a title="Books" class="navia-link books" href="https://xlabs-mirror.github.io/https://archive.org/details/books" target="_top"><span class="iconochive-books" aria-hidden="true"></span><span>Books</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-left">
-                <a title="Video" class="navia-link movies" href="https://web.archive.org/web/20230523091631/https://archive.org/details/movies" target="_top"><span class="iconochive-movies" aria-hidden="true"></span><span>Video</span></a>
+                <a title="Video" class="navia-link movies" href="https://xlabs-mirror.github.io/https://archive.org/details/movies" target="_top"><span class="iconochive-movies" aria-hidden="true"></span><span>Video</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-left">
-                <a title="Audio" class="navia-link audio" href="https://web.archive.org/web/20230523091631/https://archive.org/details/audio" target="_top"><span class="iconochive-audio" aria-hidden="true"></span><span>Audio</span></a>
+                <a title="Audio" class="navia-link audio" href="https://xlabs-mirror.github.io/https://archive.org/details/audio" target="_top"><span class="iconochive-audio" aria-hidden="true"></span><span>Audio</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-left">
-                <a title="Software" class="navia-link software" href="https://web.archive.org/web/20230523091631/https://archive.org/details/software" target="_top"><span class="iconochive-software" aria-hidden="true"></span><span>Software</span></a>
+                <a title="Software" class="navia-link software" href="https://xlabs-mirror.github.io/https://archive.org/details/software" target="_top"><span class="iconochive-software" aria-hidden="true"></span><span>Software</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-left rightmost">
-                <a title="Images" class="navia-link images" href="https://web.archive.org/web/20230523091631/https://archive.org/details/images" target="_top"><span class="iconochive-images" aria-hidden="true"></span><span>Images</span></a>
+                <a title="Images" class="navia-link images" href="https://xlabs-mirror.github.io/https://archive.org/details/images" target="_top"><span class="iconochive-images" aria-hidden="true"></span><span>Images</span></a>
               </li>
               <li class="dropdown dropdown-ia pull-right leftmost">
-                <a class="nav-upload" href="https://web.archive.org/web/20230523091631/https://archive.org/create" _target="top" data-event-click-tracking="TopNav|UploadIcon"><span class="iconochive-upload" aria-hidden="true"></span><span class="sr-only">upload</span><span class="hidden-xs-span hidden-sm-span">UPLOAD</span></a>
+                <a class="nav-upload" href="https://xlabs-mirror.github.io/https://archive.org/create" _target="top" data-event-click-tracking="TopNav|UploadIcon"><span class="iconochive-upload" aria-hidden="true"></span><span class="sr-only">upload</span><span class="hidden-xs-span hidden-sm-span">UPLOAD</span></a>
               </li>
             </ul>
             <ul id="nav-abouts">
-              <li><a target="_top" data-event-click-tracking="TopNav|AboutLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/">ABOUT</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|ContactLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/contact.php">CONTACT</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|BlogLink" href="https://web.archive.org/web/20230523091631/https://blog.archive.org/">BLOG</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|ProjectsLink" href="https://web.archive.org/web/20230523091631/https://archive.org/projects">PROJECTS</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|HelpLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/faqs.php">HELP</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|DonateLink" href="https://web.archive.org/web/20230523091631/https://archive.org/donate">DONATE</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|JobsLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/jobs.php">JOBS</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|VolunteerLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/volunteerpositions.php">VOLUNTEER</a></li>
-              <li><a target="_top" data-event-click-tracking="TopNav|PeopleLink" href="https://web.archive.org/web/20230523091631/https://archive.org/about/bios.php">PEOPLE</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|AboutLink" href="https://xlabs-mirror.github.io/https://archive.org/about/">ABOUT</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|ContactLink" href="https://xlabs-mirror.github.io/https://archive.org/about/contact.php">CONTACT</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|BlogLink" href="https://xlabs-mirror.github.io/https://blog.archive.org/">BLOG</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|ProjectsLink" href="https://xlabs-mirror.github.io/https://archive.org/projects">PROJECTS</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|HelpLink" href="https://xlabs-mirror.github.io/https://archive.org/about/faqs.php">HELP</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|DonateLink" href="https://xlabs-mirror.github.io/https://archive.org/donate">DONATE</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|JobsLink" href="https://xlabs-mirror.github.io/https://archive.org/about/jobs.php">JOBS</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|VolunteerLink" href="https://xlabs-mirror.github.io/https://archive.org/about/volunteerpositions.php">VOLUNTEER</a></li>
+              <li><a target="_top" data-event-click-tracking="TopNav|PeopleLink" href="https://xlabs-mirror.github.io/https://archive.org/about/bios.php">PEOPLE</a></li>
             </ul>
           </div><!--/.navbar-->
         </div><!--/.navwrap2-->

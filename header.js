@@ -14,12 +14,12 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 
 document.write('\
 	<nav class="navbar navbar-expand-md navbar-light">\
-		<a class="navbar-brand" href="https://web.archive.org/web/20230429232241/https://xlabs.dev/" target="_self"><img src="img/xlabs.png" alt="X LABS"></a>\
+		<a class="navbar-brand" href="https://xlabs-mirror.github.io/" target="_self"><img src="img/xlabs.png" alt="X LABS"></a>\
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>\
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">\
 			<ul class="navbar-nav ml-auto py-4 py-md-0">\
 				<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">\
-					<a class="nav-link" href="https://web.archive.org/web/20230429232241/https://xlabs.dev/">Home</a>\
+					<a class="nav-link" href="https://xlabs-mirror.github.io/">Home</a>\
 				</li>\
 				<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">\
 					<a class="nav-link dropdown-toggle iw4x-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">IW4x</a>\
@@ -71,11 +71,11 @@ document.write('\
 				<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">\
 					<a class="nav-link dropdown-toggle socials" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Socials</a>\
 					<div class="dropdown-menu socials">\
-						<a class="dropdown-item" target="_blank" href="https://web.archive.org/web/20230429232241/https://twitter.com/XLabsProject">Twitter</a>\
-						<a class="dropdown-item" target="_blank" href="https://web.archive.org/web/20230429232241/https://discord.gg/sKeVmR3">Discord</a>\
-						<a class="dropdown-item" target="_blank" href="https://web.archive.org/web/20230429232241/https://youtube.com/channel/UCPA9X79ZsCXMBBCSJ63wA3A?sub_confirmation=1">YouTube</a>\
-						<a class="dropdown-item" target="_blank" href="https://web.archive.org/web/20230429232241/https://github.com/XLabsProject">GitHub</a>\
-						<a class="dropdown-item" target="_blank" href="https://web.archive.org/web/20230429232241/https://patreon.com/xlabsproject">Patreon</a>\
+						<a class="dropdown-item" target="_blank" href="https://xlabs-mirror.github.io/https://twitter.com/XLabsProject">Twitter</a>\
+						<a class="dropdown-item" target="_blank" href="https://xlabs-mirror.github.io/https://discord.gg/sKeVmR3">Discord</a>\
+						<a class="dropdown-item" target="_blank" href="https://xlabs-mirror.github.io/https://youtube.com/channel/UCPA9X79ZsCXMBBCSJ63wA3A?sub_confirmation=1">YouTube</a>\
+						<a class="dropdown-item" target="_blank" href="https://xlabs-mirror.github.io/https://github.com/XLabsProject">GitHub</a>\
+						<a class="dropdown-item" target="_blank" href="https://xlabs-mirror.github.io/https://patreon.com/xlabsproject">Patreon</a>\
 					</div>\
 				</li>\
 			</ul>\
