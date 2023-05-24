@@ -693,7 +693,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 <h1 id="introduction">Introduction</h1>
 <p>This is the documentation for the IW6x scripting API.<br>Please note that the API might change over time and thus break existing scripts.<br>The intention is to create the best API possible and thus negelecting backwards compatibility.<br>There are also plans to create a common API with the Plutonium team, which might also have a huge impact on the API again, once this is done.  </p>
 <p>The IW6x scripting API integrates into the game&#39;s scripting VM/environment, which might be more commonly known as GSC.
-The scripts are written in LUA. In case you are not familiar with LUA, you should catch up <a href="https://xlabs-mirror.github.io/https://www.lua.org/pil/contents.html" target="_blank">here</a>.</p>
+The scripts are written in LUA. In case you are not familiar with LUA, you should catch up <a href="https://www.lua.org/pil/contents.html" target="_blank">here</a>.</p>
 <h1 id="quick-dirty-example">Quick &amp; dirty Example</h1>
 <p>Here is a sample script. If you want to read code instead of documentation, this should cover up the basics of the API:</p>
 <p><code>iw6x/scripts/heli/__init__.lua</code></p>
@@ -861,11 +861,11 @@ timer:clear()</pre><p>Timer callbacks don&#39;t take any arguments. If you want 
 
 <span class="hljs-keyword">local</span> player = <span class="hljs-comment">-- [...]</span>
 game:oninterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> do_something(player) <span class="hljs-keyword">end</span>, <span class="hljs-number">1000</span>)</pre><h1 id="functions">Functions</h1>
-<p>The game provides a set of global functions and entity methods.<br>The functions provided are pretty much the same as COD4 had them.<br>You can have a look at a COD4 scripting reference: <a href="https://xlabs-mirror.github.io/https://znation.nl/cod4script/">https://znation.nl/cod4script/</a> (libcod category doesn&#39;t exist in IW6x!)<br>Also note that all functions and methods are lowercase in IW6x!</p>
+<p>The game provides a set of global functions and entity methods.<br>The functions provided are pretty much the same as COD4 had them.<br>You can have a look at a COD4 scripting reference: <a href="https://znation.nl/cod4script/">https://znation.nl/cod4script/</a> (libcod category doesn&#39;t exist in IW6x!)<br>Also note that all functions and methods are lowercase in IW6x!</p>
 <p>Global functions are functions that don&#39;t need an entity to work. They need to be called on the <code>game</code> object.<br>In the COD4 scripting reference, these functions don&#39;t have a <code>Call this on:</code> paragraph.<br>Here is an example:  </p>
 <pre class="hljs">game:ambientplay(<span class="hljs-string">"embient_mp_highrise"</span>);</pre><p>There are also member functions. These do have a paragraph called <code>Call this on:</code> in the COD4 reference.
 Here is an example:</p>
-<pre class="hljs">player:freezecontrols(<span class="hljs-literal">false</span>)</pre><p>For a list of all functions and methods available in IW6x, you can have a look at the source code:<br><a href="https://xlabs-mirror.github.io/https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp">https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp</a></p>
+<pre class="hljs">player:freezecontrols(<span class="hljs-literal">false</span>)</pre><p>For a list of all functions and methods available in IW6x, you can have a look at the source code:<br><a href="https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp">https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp</a></p>
 <h1 id="fields">Fields</h1>
 <p>Entities do have fields (or properties).<br>They differ for each type of entity. For example players have fields like <code>name</code>, <code>origin</code> or <code>angles</code> and hud elements have fields like <code>x</code>, <code>y</code> or <code>alpha</code>.<br>You can get and set them like this (only the 5 primitive types are supported):</p>
 <pre class="hljs"><span class="hljs-keyword">local</span> playername = player.name

@@ -26,8 +26,8 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 
     // Image rendered by Slykuiper: https://slykuiper.com/
     const textures = [
-        'https://xlabs-mirror.github.io/https://i.imgur.com/eALPkl9.jpg',
-        'https://xlabs-mirror.github.io/https://i.imgur.com/0CXz7zd.jpg'
+        'https://i.imgur.com/eALPkl9.jpg',
+        'https://i.imgur.com/0CXz7zd.jpg'
     ];
 
     // ugly but fuck it.

@@ -51,7 +51,7 @@
     </script>
     <script language="javascript" type="text/javascript">
         function GetLatestReleaseInfo() {
-            $.getJSON("https://xlabs-mirror.github.io/https://api.github.com/repos/XLabsProject/iw6x-client/releases/latest").done(function(release) {
+            $.getJSON("https://api.github.com/repos/XLabsProject/iw6x-client/releases/latest").done(function(release) {
                 var asset = release.assets[0];
                 $(".download").attr("href", asset.browser_download_url);
                 window.location.replace(asset.browser_download_url);
@@ -86,10 +86,10 @@
             </div>
             <div class="line"></div>
             <h2>IW6x Download</h2>
-            <p id="download-block" style="display: none;">Click <a href="https://xlabs-mirror.github.io/https://master.xlabs.dev:444/iw6x/master/Release/build/bin/x64/Release/iw6x.exe">here</a> to download IW6x.</p>
+            <p id="download-block" style="display: none;">Click <a href="https://master.xlabs.dev:444/iw6x/master/Release/build/bin/x64/Release/iw6x.exe">here</a> to download IW6x.</p>
             <p id="patreon-block" style="display: none;">
                 If you like our projects, consider donating on patreon:<br>
-                <a href="https://xlabs-mirror.github.io/https://www.patreon.com/xlabsproject" class="btn btn-common patreon-button"><i class="fab fa-patreon"></i>&nbsp;&nbsp;&nbsp;Patreon</a>
+                <a href="https://www.patreon.com/xlabsproject" class="btn btn-common patreon-button"><i class="fab fa-patreon"></i>&nbsp;&nbsp;&nbsp;Patreon</a>
             </p>
             <script>
                 function unlocker() {
@@ -103,7 +103,7 @@
             </script>
             <p id="twitter-block">
                 Follow us on twitter to unlock the download:<br>
-                <a href="https://xlabs-mirror.github.io/https://twitter.com/XLabsProject" target="_blank" onclick="unlocker()" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"><i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;Twitter</a>
+                <a href="https://twitter.com/XLabsProject" target="_blank" onclick="unlocker()" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"><i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;Twitter</a>
             </p>
         </div>
     </section>
@@ -124,7 +124,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="" crossorigin="anonymous"></script>
     <script language="javascript" type="text/javascript">
         function GetLatestReleaseInfo() {
-            $.getJSON("https://xlabs-mirror.github.io/https://api.github.com/repos/XLabsProject/iw6x-client/releases/latest").done(function(release) {
+            $.getJSON("https://api.github.com/repos/XLabsProject/iw6x-client/releases/latest").done(function(release) {
                 var asset = release.assets[0];
                 $(".download").attr("href", asset.browser_download_url);
                 window.location.replace(asset.browser_download_url);

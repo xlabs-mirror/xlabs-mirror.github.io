@@ -73,11 +73,11 @@
             <div class="line"></div>
             <h2>X Labs Launcher Download</h2>
             <p id="download-block">
-                <a href="https://xlabs-mirror.github.io/https://updater.xlabs.dev/data/xlabs.exe" class="btn btn-common download-button"><i class="fas fa-download"></i>&nbsp;&nbsp;&nbsp;Download</a>
+                <a href="https://updater.xlabs.dev/data/xlabs.exe" class="btn btn-common download-button"><i class="fas fa-download"></i>&nbsp;&nbsp;&nbsp;Download</a>
             </p>
             <p id="patreon-block">
                 If you like our projects, consider donating on Patreon:<br>
-                <a href="https://xlabs-mirror.github.io/https://www.patreon.com/xlabsproject" class="btn btn-common patreon-button"><i class="fab fa-patreon"></i>&nbsp;&nbsp;&nbsp;Patreon</a>
+                <a href="https://www.patreon.com/xlabsproject" class="btn btn-common patreon-button"><i class="fab fa-patreon"></i>&nbsp;&nbsp;&nbsp;Patreon</a>
             </p>
         </div>
     </section>
@@ -99,7 +99,7 @@
     <script language="javascript" type="text/javascript">
         function GetLatestReleaseInfo()
         {
-            $.getJSON("https://xlabs-mirror.github.io/https://api.github.com/repos/XLabsProject/iw4x-client/releases/latest").done(function (release)
+            $.getJSON("https://api.github.com/repos/XLabsProject/iw4x-client/releases/latest").done(function (release)
             {
                 var asset = release.assets[0];
                 $(".download").attr("href", asset.browser_download_url);
