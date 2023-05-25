@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<div style="background-color: #f8f9fa; padding: 10px; text-align: center;">
+        <p>This page has been saved for archival purposes on 2023-05-24 22:58:17.792848.</p>
+    </div><!DOCTYPE html>
 <html lang="en">
   <head>
 
@@ -679,7 +681,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
           <div class="nav-container">
             <div class="nav-inner" id="scroll-spy" style="width: min-content; overflow: auto; top: 60px; bottom: 0; padding 10px 0 10px 0;">
               <span class="toc">Table of contents</span>
-              <ul class="nav"><li class="active"><a href="#Home">Home.md</a></li><li><a href="#Scripting">Scripting.md</a></li></ul>
+              <ul class="nav"><li><a href="#General">General</a><ul class="nav"><li class="active"><a href="https://github.com/Jawesome99/IW4x/wiki/General#folder-structure">Folder structure</a></li></ul></li><li><a href="#Client">Client</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#installation">Installation</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#command-line-parameters">Command line parameters</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#color-codes">Color codes</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#direct3d-9ex">Direct3D 9Ex</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#native-cursor">Native cursor</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Client#security-levels">Security levels</a></li></ul></li><li><a href="#Server">Server</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#server-types">Server types</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#party">Party</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#match">Match</a></li></ul></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#requirements">Requirements</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#quick-instructions-for-hosting-a-match-server">Quick instructions for hosting a match server</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#quick-instructions-for-hosting-a-party-server">Quick instructions for hosting a party server</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Server#quick-instructions-for-hosting-a-party-server">Advanced server configuration</a><ul class="nav"><li><a href="#Advanced-general-server-configuration">General</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-general-server-configuration#command-line-parameters">Command line parameters</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-general-server-configuration#supported-gametypes">Supported gametypes</a></li></ul></li><li><a href="#Advanced-match-server-configuration">Match server</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-match-server-configuration#server-config">Server config</a></li></ul></li><li><a href="#Advanced-party-server-configuration">Party server</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-party-server-configuration#server-config">Server config</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-party-server-configuration#playlist-config">Playlist config</a></li></ul></li><li><a href="#Docker">Docker</a></li><li><a href="#IW4x-Server-API">IW4x Server API</a>  </li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Setting-up-%22FastDL%22-or-http-server-downloads">Setting up FastDL</a></li><li><a href="#Gameserver-file-optimization">Gameserver file optimization</a></li><li><a href="#List-of-map-names">List of map names</a></li></ul></li></ul></li><li><a href="#Mods">Mods</a><ul class="nav"><li><a href="#Create-a-mod">Create a mod</a></li><li><a href="#Create-a-map">Create a map</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#requirements">Requirements</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#create-a-map">Create a map</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#convert-a-map">Convert a map</a><ul class="nav"><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#notes">Notes</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#conversion">Conversion</a></li><li><a href="https://github.com/Jawesome99/IW4x/wiki/Create-a-map#deployment">Deployment</a></li></ul></li></ul></li></ul></li><li><span>Troubleshooting</span><ul class="nav"><li><a href="#Why-you-see-fewer-servers-than-others-on-IW4x">Seeing few servers</a></li></ul></li></ul>
               
             </div>
           </div>
@@ -687,208 +689,1946 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 
 
         <div class="col-md-9">
-<p class="page" id="Home"></p><h1>Home.md</h1>
-<p>Welcome to the iw6x-client wiki!</p>
-<p class="page" id="Scripting"></p><h1>Scripting.md</h1>
-<h1 id="introduction">Introduction</h1>
-<p>This is the documentation for the IW6x scripting API.<br>Please note that the API might change over time and thus break existing scripts.<br>The intention is to create the best API possible and thus negelecting backwards compatibility.<br>There are also plans to create a common API with the Plutonium team, which might also have a huge impact on the API again, once this is done.  </p>
-<p>The IW6x scripting API integrates into the game&#39;s scripting VM/environment, which might be more commonly known as GSC.
-The scripts are written in LUA. In case you are not familiar with LUA, you should catch up <a href="https://www.lua.org/pil/contents.html" target="_blank">here</a>.</p>
-<h1 id="quick-dirty-example">Quick &amp; dirty Example</h1>
-<p>Here is a sample script. If you want to read code instead of documentation, this should cover up the basics of the API:</p>
-<p><code>iw6x/scripts/heli/__init__.lua</code></p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">move_helicopter</span><span class="hljs-params">(heli, player)</span></span>
-    <span class="hljs-keyword">local</span> origin = player.origin
-    origin.z = origin.z + <span class="hljs-number">1000</span>
+<p class="page" id="General"></p><h1>General</h1>
+<p>General configuration for IW4x.</p>
+<h2 id="folder-structure">Folder structure</h2>
+<ul>
+<li><code>IW4x\</code><sup>[1]</sup><ul>
+<li><code>iw4x.dll</code><sup>[2]</sup></li>
+<li><code>iw4x.exe</code><sup>[3]</sup></li>
+<li><code>iw4x\</code><sup>[4]</sup></li>
+<li><code>main\</code><sup>[5]</sup></li>
+<li><code>mods\</code><sup>[6]</sup></li>
+<li><code>players\</code><sup>[7]</sup></li>
+<li><code>usermaps\</code><sup>[8]</sup></li>
+<li><code>userraw\</code><sup>[9]</sup></li>
+<li><code>zone\</code><sup>[10]</sup></li>
+</ul>
+</li>
+</ul>
+<p><sup>[1] Your Modern Warfare 2 folder.<br>[2] The part where all our magic happens.<br>[3] The binary of the game.<br>[4] <strong>Do not touch anything or put anything in here, unless we told you to!</strong><br>[5] <strong>Do not touch anything or put anything in here, unless we told you to!</strong><br>[6] Here you can store any mod you want to apply, by using <code>fs_game</code>.<br>[7] Your configuration and all data related to your playerprofile is kept there.<br>[8] Your custom maps are stored here.<br>[9] This is a folder we have added for you to store your custom raw- and iwd files <em>(e.g. custom camos etc.).</em><br>[10] <strong>Do not touch anything or put anything in here, unless we told you to!</strong></p>
+<p class="page" id="Client"></p><h1>Client</h1>
+<p>Here you can find client specific configuration.</p>
+<h2 id="installation">Installation</h2>
+<p>You have to fulfill the following requirements to play IW4x:</p>
+<ul>
+<li>An internet connection</li>
+<li>A clean installation of <a href="http://store.steampowered.com/app/10180">Call of Duty Modern Warfare 2</a></li>
+</ul>
+<p>To install IW4x follow the instructions below:</p>
+<ul>
+<li>Copy the game folder to a separate location</li>
+<li>Download the <a href="https://iw4xcachep26muba.onion.to/download/updater.exe">Updater</a> or the zip archive from our <a href="https://iw4xcachep26muba.onion.to/">website</a>. Use the mirrors if you want to get your full download speed.</li>
+<li>Updater: Copy the updater to the game folder and start the updater.</li>
+<li>Zip: Extract the zip archive directly in your game folder.</li>
+<li>Start the game with the IW4x executable.</li>
+</ul>
+<p><strong>Multiple clients in the same game folder can lead to crashes.</strong></p>
+<h2 id="command-line-parameters">Command line parameters</h2>
+<p>Those are the client related command line parameters.</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-console</code></td>
+<td>Enables the external console.</td>
+</tr>
+<tr>
+<td><code>-dedicated</code></td>
+<td>Starts as a server.</td>
+</tr>
+<tr>
+<td><code>-dump</code></td>
+<td>Dumps raw map entities.</td>
+</tr>
+<tr>
+<td><code>-nosteam</code></td>
+<td>Disables Steam integration.</td>
+</tr>
+<tr>
+<td><code>-repair</code></td>
+<td>Not implemented yet.</td>
+</tr>
+<tr>
+<td><code>-version</code></td>
+<td>Shows game version.</td>
+</tr>
+<tr>
+<td><code>-zonebuilder</code></td>
+<td>Starts the IW4x Zonebuilder.</td>
+</tr>
+<tr>
+<td><code>+connect &lt;ip:port&gt;</code></td>
+<td>Directly connect to specified server, the default port (<code>28960</code>) will be used when no one has been provided.</td>
+</tr>
+<tr>
+<td><code>+set &lt;dvar&gt; &lt;value&gt;</code></td>
+<td>Provide any dvar to the game, e.g. <code>+set r_fullscreen 0</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="color-codes">Color Codes</h2>
+<p>Color codes allow coloring of any text, mainly player and server names. Modern Warfare 2 itself defines the following colors:</p>
+<p>^1 Red.<br>^2 Green.<br>^3 Yellow.<br>^4 Blue.<br>^5 Cyan.<br>^6 Pink.<br>^7 White.<br>^8 This color changes depending on what map you’re playing on:</p>
+<ul>
+<li>American maps<ul>
+<li>Dark green.</li>
+</ul>
+</li>
+<li>Russian maps<ul>
+<li>Dark red.</li>
+</ul>
+</li>
+<li>British maps<ul>
+<li>Dark blue.</li>
+</ul>
+</li>
+</ul>
+<p>^9 Grey.<br>^0 Black.</p>
+<p>Additionally, IW4x introduces new color codes for more fanciness:</p>
+<p>^: Rainbow color.<br>^; A color set by the server using the <code>sv_customTextColor</code> dvar.</p>
+<p>You can let the color of the nametag above your player model change by using <code>^^::</code>!</p>
+<h2 id="direct3d-9ex">Direct3D 9Ex</h2>
+<p>Direct3D 9Ex is an improved version of Microsoft’s Direct3D 9<sup>[1]</sup>.</p>
+<p>In IW4x it has been implemented to reduce the RAM usage of the game. If you have some problems you can simply disable it in the video options.</p>
+<h2 id="native-cursor">Native cursor</h2>
+<p>This setting allows you to disable the custom game cursor and use the native one your operating system provides, you can change this in the video options.</p>
+<h2 id="security-levels">Security levels</h2>
+<p>Every player has an identity with which they can join servers. Normally such an identity would be some sort of login information like a forum login or an ID like you would get on steam. IW4x is not able to use such a way of authentication since it is completely decentralized. Instead, the client generates a random, unique identity for each player if they don’t have one yet.</p>
+<p>Whenever a player gets banned, their identity gets added to a server-side blacklist which prevents them from joining with that identity again. In order to circumvent such a ban, a player can then create a new identity.</p>
+<p>This is where the security level comes in: It determines the level of complexity an identity has to fulfill before it can be seen as an identity that is allowed to join the server. This implies that the client has to do a certain amount of work. The higher the complexity, the more work a client will statistically have to do.</p>
+<p>Of course, a client is still able to pregenerate identities to prepare for instant ban evasion. This is where the server admin can reconfigure the security level on their server to a higher value, which automatically invalidates all identities below that level, requiring all clients trying to join to recalculate a valid identity token.</p>
+<p>The security level is set to 23 by default, which in average leads to a waiting time of about 30 seconds for the identity token to be calculated.</p>
+<p><sup>[1] MSDN: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ee890072(v=vs.85">Direct3D 9Ex Improvements</a>.aspx)</p>
+<p class="page" id="Server"></p><h1>Server</h1>
+<p>Quick setup and advanced configuration for IW4x servers.</p>
+<blockquote>
+<p>⚠️ Warning<br>You can only host up to 15 servers on the same IP address, additional servers will be rejected by the decentralized node system. This has been implemented as a security measurement to prevent flooding the server list.</p>
+</blockquote>
+<h2 id="server-types">Server types</h2>
+<h3 id="party">Party</h3>
+<p>A party<sup>[1]</sup> is a dedicated lobby, which uses a playlist for its configuration and will take players back into a lobby after each map. The advantage of the party system is:</p>
+<ul>
+<li>adjust classes and killstreak rewards without leaving the server</li>
+<li>vote to skip next map</li>
+<li>map rotation is random</li>
+</ul>
+<p>Because of that, a party server is ideal for a public game servers.</p>
+<blockquote>
+<p>⚠️ Warning<br>Party servers are very buggy and unstable, they <strong>will</strong> crash often and even with scripts the server might not properly restart. It is advised to not use party servers and stick to match servers instead!</p>
+</blockquote>
+<h3 id="match">Match</h3>
+<p>A match is a normal dedicated server, which uses a map rotation, ideal for private servers.</p>
+<h2 id="requirements">Requirements</h2>
+<p>You have to fulfill the following requirements to be able to host a server for IW4x:</p>
+<ul>
+<li>An internet connection</li>
+<li>A clean installation of <a href="http://store.steampowered.com/app/10180">Call of Duty: Modern Warfare 2</a></li>
+<li><a href="https://notepad-plus-plus.org/">Notepad++</a> to edit config files</li>
+<li><a href="http://www.7-zip.org/">7-ZIP</a> to extract the client files</li>
+<li>Basic knowledge about your current operating system</li>
+<li>Common sense (in case of a public server)</li>
+</ul>
+<h2 id="quick-instructions-for-hosting-a-match-server">Quick instructions for hosting a match server</h2>
+<blockquote>
+<p>😡 Warning<br>If you forget to remove the <code>&lt;</code> and <code>&gt;</code> around the port, tech support is legally allowed to call you retarded.<br><sup><sup>In case you didn&#39;t get that, this means remove them.</sup></sup></p>
+<ul>
+<li>Copy your ‘Call of Duty Modern Warfare 2’ folder to another location</li>
+<li>Extract the client files into your copied folder</li>
+<li>Download the <a href="https://emosewaj.eu/downloads/server_match.cfg">📥 server.cfg</a> and place it in your ‘players’ folder, edit it to your needs</li>
+<li>Download the <a href="https://emosewaj.eu/downloads/startserver_match.bat">📥 startserver.bat</a> and place it into the root, edit it as needed</li>
+<li>Forward the TCP and UDP port you&#39;ve specified in <code>+set net_port &lt;port&gt;</code></li>
+<li>Run the batch and have fun!</li>
+</ul>
+</blockquote>
+<h2 id="quick-instructions-for-hosting-a-party-server">Quick instructions for hosting a party server</h2>
+<ul>
+<li>Copy your ‘Call of Duty Modern Warfare 2’ folder to another location</li>
+<li>Extract the client files into your copied folder</li>
+<li>Download the <a href="https://emosewaj.eu/downloads/server_party.cfg">📥 server.cfg</a> and place it in your ‘players’ folder, edit it to your needs</li>
+<li>Download the <a href="https://emosewaj.eu/downloads/startserver_party.bat">📥 startserver.bat</a> and place it into the root, edit it as needed</li>
+<li>Forward the TCP and UDP port you&#39;ve specified in <code>+set net_port &lt;port&gt;</code></li>
+<li>Run the batch and have fun!</li>
+</ul>
+<h2 id="file-mirrors">File mirrors</h2>
+<p>If the above links don&#39;t work, you can download Zip files containing the files you need from <a href="https://github.com/Jawesome99/IW4x/releases/tag/0.6.0-server">here</a>!</p>
+<p>Alternatively, you can download the files individually from <a href="https://github.com/Jawesome99/IW4x/tree/master/files">here</a></p>
+<h2 id="advanced-server-configuration">Advanced server configuration</h2>
+<p>Further information for advanced server configuration:</p>
+<p><a href="#Advanced-general-server-configuration">General</a><br><a href="#Advanced-match-server-configuration">Match server</a><br><a href="#Advanced-party-server-configuration">Party server</a><br><a href="#Docker">Docker</a><br><a href="https://github.com/Jawesome99/IW4x/wiki/Setting-up-%22FastDL%22-or-http-server-downloads">Setting up FastDL</a><br><a href="#IW4x-Server-API">API</a><br><a href="#Gameserver-file-optimization">Gameserver file optimization</a><br><a href="#List-of-map-names">List of map names</a></p>
+<p><sup>[1] A server starts per default as a party.</sup></p>
+<p class="page" id="Advanced-general-server-configuration"></p><h1>General</h1>
+<p>General server configuration for advanced options.</p>
+<h2 id="command-line-parameters">Command line parameters</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-dedicated</code></td>
+<td></td>
+<td></td>
+<td>Starts the game as a dedicated server</td>
+</tr>
+<tr>
+<td><code>-stdout</code></td>
+<td></td>
+<td></td>
+<td>Starts the server without a console, only text output - useful for running server in wine</td>
+</tr>
+<tr>
+<td><code>-console</code></td>
+<td></td>
+<td></td>
+<td>Starts the server in a dedicated console</td>
+</tr>
+<tr>
+<td><code>+set net_ip &lt;ip&gt;</code></td>
+<td>0.0.0.0</td>
+<td></td>
+<td>Configures the ip the server is listening on</td>
+</tr>
+<tr>
+<td><code>+set net_port &lt;int&gt;</code></td>
+<td>28960</td>
+<td>1 - 65535</td>
+<td>Configures the port the server is listening on</td>
+</tr>
+<tr>
+<td><code>+set sv_lanonly &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Starts server for LAN only</td>
+</tr>
+<tr>
+<td><code>+exec &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Loads a given server configuration</td>
+</tr>
+<tr>
+<td><code>+set fs_game &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures which mod to load</td>
+</tr>
+<tr>
+<td><code>+set party_enable &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Configures wether to use the party or match system</td>
+</tr>
+<tr>
+<td><code>+set sv_maxclients &lt;int&gt;</code></td>
+<td>18</td>
+<td>1 - 18</td>
+<td>Configures the amount of clients on the server (match only)</td>
+</tr>
+<tr>
+<td><code>+map_rotate</code></td>
+<td></td>
+<td></td>
+<td>Starts map rotation (match only)</td>
+</tr>
+<tr>
+<td><code>+set playlistFilename &lt;string&gt;</code></td>
+<td>“playlists_default.info”</td>
+<td></td>
+<td>Configures which playlist to load (party only)</td>
+</tr>
+<tr>
+<td><code>+playlist &lt;int&gt;</code></td>
+<td></td>
+<td>0 - 99</td>
+<td>Loads playlist number +1 from playlist file (party only)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-gametypes">Supported gametypes</h2>
+<table>
+<thead>
+<tr>
+<th>abbreviation</th>
+<th>gametype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>war</td>
+<td>Team Deathmatch</td>
+</tr>
+<tr>
+<td>dm</td>
+<td>Free-for-all</td>
+</tr>
+<tr>
+<td>dom</td>
+<td>Domination</td>
+</tr>
+<tr>
+<td>koth</td>
+<td>Headquarters</td>
+</tr>
+<tr>
+<td>sab</td>
+<td>Sabotage</td>
+</tr>
+<tr>
+<td>sd</td>
+<td>Search and Destroy</td>
+</tr>
+<tr>
+<td>arena</td>
+<td>Arena</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>Demolition</td>
+</tr>
+<tr>
+<td>ctf</td>
+<td>Capture the Flag</td>
+</tr>
+<tr>
+<td>oneflag</td>
+<td>One-Flag CTF</td>
+</tr>
+<tr>
+<td>gtnw</td>
+<td>Global Thermo-Nuclear War</td>
+</tr>
+</tbody>
+</table>
+<p>Additional gametypes are possible with mods.</p>
+<h2 id="supported-maps">Supported maps</h2>
+<p>See <a href="#List-of-map-names">List of map names</a></p>
+<p class="page" id="Advanced-match-server-configuration"></p><h1>Match server</h1>
+<p>This is how you configure your server to run as a match server.</p>
+<h2 id="server-config">Server config</h2>
+<p>This is how you can configure your server to run as a match server. The configuration has to be done in the server.cfg file that your server is using.</p>
+<p><a href="#Advanced-general-server-configuration">General</a> server configuration is required for general configuration options.</p>
+<h3 id="info">Info</h3>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set sv_hostname &lt;string&gt;</code></td>
+<td>“IW4x Server”</td>
+<td></td>
+<td>Sets the server hostname</td>
+</tr>
+<tr>
+<td><code>set sv_securityLevel &lt;int&gt;</code></td>
+<td>23</td>
+<td>0 - 256</td>
+<td>Configures the servers security level</td>
+</tr>
+<tr>
+<td><code>set sv_motd &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Sets a custom motd which is shown on the loadscreen when a player joins</td>
+</tr>
+<tr>
+<td><code>sets _Admin &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures admin name</td>
+</tr>
+<tr>
+<td><code>sets _Email &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures admin email</td>
+</tr>
+<tr>
+<td><code>sets _Website &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures website</td>
+</tr>
+<tr>
+<td><code>sets _Location &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures location</td>
+</tr>
+</tbody>
+</table>
+<h3 id="non-gameplay-configuration">Non gameplay configuration</h3>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set rcon_password &lt;string&gt;</code></td>
+<td>&quot;&quot;</td>
+<td></td>
+<td>Configures password for rcon</td>
+</tr>
+<tr>
+<td><code>set g_password &lt;string&gt;</code></td>
+<td>&quot;&quot;</td>
+<td></td>
+<td>Configures password for gameserver</td>
+</tr>
+<tr>
+<td><code>set g_inactivity &lt;int&gt;</code></td>
+<td>120</td>
+<td>0 - 999</td>
+<td>Enable auto kick feature for idle/AFK players</td>
+</tr>
+<tr>
+<td><code>set g_inactivitySpectator &lt;int&gt;</code></td>
+<td>180</td>
+<td>0 - 999</td>
+<td>Time in seconds before a spectator gets kicked</td>
+</tr>
+<tr>
+<td><code>set g_logSync &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>1 = always flush games_mp.log, 0 = only flush on game end</td>
+</tr>
+<tr>
+<td><code>set g_log &lt;string&gt;</code></td>
+<td>logs/games_mp.log</td>
+<td></td>
+<td>Configures gamelog filename</td>
+</tr>
+<tr>
+<td><code>set sv_allowClientConsole &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable players ability to access server commands</td>
+</tr>
+<tr>
+<td><code>set sv_maxPing &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Maximum ping allowed, any higher and players will get kicked</td>
+</tr>
+<tr>
+<td><code>set sv_timeout &lt;int&gt;</code></td>
+<td>20</td>
+<td>0 - 1800</td>
+<td>Timeout time period</td>
+</tr>
+<tr>
+<td><code>set sv_reconnectlimit &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1800</td>
+<td>How many times you can try to reconnect</td>
+</tr>
+<tr>
+<td><code>set sv_pure &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Verifying client files</td>
+</tr>
+<tr>
+<td><code>set sv_sayName &lt;string&gt;</code></td>
+<td>^7Console</td>
+<td></td>
+<td>Name server-side ‘say’ commands show up as</td>
+</tr>
+<tr>
+<td><code>set sv_floodProtect &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Chat Spam Protection</td>
+</tr>
+<tr>
+<td><code>set sv_kickBanTime &lt;int&gt;</code></td>
+<td>300</td>
+<td>0 - 3600</td>
+<td>Configures kick ban duration</td>
+</tr>
+<tr>
+<td><code>set scr_game_objectiveStreaks &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable Chopper, AC130 and Nuke</td>
+</tr>
+<tr>
+<td><code>set scr_classic &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable IW3 killstreak system</td>
+</tr>
+<tr>
+<td><code>set scr_intermission_time &lt;int&gt;</code></td>
+<td>30</td>
+<td>0 - 999</td>
+<td>Change timer before server loads the next map (currently broken)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="base-game-configuration">Base game configuration</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set g_gametype &lt;string&gt;</code></td>
+<td>&quot;war&quot;</td>
+<td></td>
+<td>Choose a gametype from the list</td>
+</tr>
+<tr>
+<td><code>set scr_player_forcerespawn &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Players respawn automatically after being fragged</td>
+</tr>
+<tr>
+<td><code>set scr_thirdperson &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable third-person mode</td>
+</tr>
+<tr>
+<td><code>set scr_game_hardpoints &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable Killstreak rewards</td>
+</tr>
+<tr>
+<td><code>set scr_hardpoint_allowhelicopter &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Allow Attack Helicopters</td>
+</tr>
+<tr>
+<td><code>set scr_hardpoint_allowuav &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Allow UAV</td>
+</tr>
+<tr>
+<td><code>set scr_hardpoint_allowartillery &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Allow Airstrikes</td>
+</tr>
+<tr>
+<td><code>set scr_game_perks &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Allow players to have perks</td>
+</tr>
+<tr>
+<td><code>set scr_game_allowkillcam &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Allow Killcam</td>
+</tr>
+<tr>
+<td><code>set scr_nukeTimer &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Timer when nuke goes off</td>
+</tr>
+<tr>
+<td><code>set scr_diehard &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable die-hard mode</td>
+</tr>
+<tr>
+<td><code>set scr_teambalance &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable auto balance</td>
+</tr>
+<tr>
+<td><code>set scr_game_spectatetype &lt;int&gt;</code></td>
+<td>2</td>
+<td>0 - 2</td>
+<td>Allow Spectators. 0 = Disabled, 1 = Team/Player only, 2 = Free</td>
+</tr>
+<tr>
+<td><code>set scr_player_suicidespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Wait before you respawn if you committed suicide</td>
+</tr>
+<tr>
+<td><code>set scr_player_sprinttime &lt;int&gt;</code></td>
+<td>4</td>
+<td>0 - 999</td>
+<td>Sprint time, duration a player can run</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hardcore-configuration">Hardcore configuration</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set g_hardcore &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable Hardcore Mode</td>
+</tr>
+<tr>
+<td><code>set scr_game_deathpointloss &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable point loss on death</td>
+</tr>
+<tr>
+<td><code>set scr_game_onlyheadshots &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable only headshots mode. You can only kill players by taking headshots.</td>
+</tr>
+<tr>
+<td><code>set scr_player_maxhealth &lt;int&gt;</code></td>
+<td>30</td>
+<td>0 - 100</td>
+<td>Percent of health players will have on respawn</td>
+</tr>
+<tr>
+<td><code>set scr_team_fftype &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 3</td>
+<td>Enable Friendly Fire. 1 = on, 2 = reflect, 3 = shared</td>
+</tr>
+<tr>
+<td><code>set scr_player_healthregentime &lt;int&gt;</code></td>
+<td>5</td>
+<td>0 - 999</td>
+<td>Time it takes to recover damage</td>
+</tr>
+<tr>
+<td><code>set scr_team_kickteamkillers &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable autokick for team kill</td>
+</tr>
+<tr>
+<td><code>set scr_team_teamkillspawndelay &lt;int&gt;</code></td>
+<td>20</td>
+<td>0 - 999</td>
+<td>Configure respawn penalty for team kill</td>
+</tr>
+</tbody>
+</table>
+<h2 id="airdrop-configuration">Airdrop configuration</h2>
+<p>Higher weights increase random selection chance.</p>
+<table>
+<thead>
+<tr>
+<th>paramter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_airdrop_ac130 &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for AC130</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_ammo &lt;int&gt;</code></td>
+<td>17</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for ammo</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_counter_uav &lt;int&gt;</code></td>
+<td>15</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for Counter UAV</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_emp &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for EMP</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_harrier_airstrike &lt;int&gt;</code></td>
+<td>7</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for airstrike</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_helicopter &lt;int&gt;</code></td>
+<td>7</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_helicopter_flares &lt;int&gt;</code></td>
+<td>5</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter flares</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_helicopter_minigun &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter minigun</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_nuke &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for nuke</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_precision_airstrike &lt;int&gt;</code></td>
+<td>11</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for precision airstrike</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_predator_missile &lt;int&gt;</code></td>
+<td>12</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for predator missile</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_sentry &lt;int&gt;</code></td>
+<td>12</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for sentry</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_stealth_airstrike &lt;int&gt;</code></td>
+<td>5</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for stealth bomber</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_uav &lt;int&gt;</code></td>
+<td>17</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for UAV</td>
+</tr>
+</tbody>
+</table>
+<h2 id="emergency-airdrop-configuration">Emergency airdrop configuration</h2>
+<p>Higher weights increase random selection chance.</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_airdrop_mega_ac130 &lt;int&gt;</code></td>
+<td>2</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for AC130</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_ammo &lt;int&gt;</code></td>
+<td>12</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for ammo</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_counter_uav &lt;int&gt;</code></td>
+<td>16</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for Counter UAV</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_emp &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for EMP</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_harrier_airstrike &lt;int&gt;</code></td>
+<td>5</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for airstrike</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_helicopter &lt;int&gt;</code></td>
+<td>5</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_helicopter_flares &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter flares</td>
+</tr>
+<tr>
+<td>`set scr_airdrop_mega_helicopter_minigun <int></td>
+<td>2</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for helicopter minigun</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_nuke &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for nuke</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_precision_airstrike &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for precision airstrike</td>
+</tr>
+<tr>
+<td>`set scr_airdrop_mega_predator_missile <int></td>
+<td>14</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for predator missile</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_sentry &lt;int&gt;</code></td>
+<td>16</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for sentry</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_stealth_airstrike &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for stealth bomber</td>
+</tr>
+<tr>
+<td><code>set scr_airdrop_mega_uav &lt;int&gt;</code></td>
+<td>12</td>
+<td>0 - 1000</td>
+<td>Configures drop chance for UAV</td>
+</tr>
+</tbody>
+</table>
+<h2 id="free-for-all-gametype-settings">Free for all gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_dm_scorelimit &lt;int&gt;</code></td>
+<td>1500</td>
+<td>0 - 99999</td>
+<td>Score limit to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_dm_timelimit &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn&#39;t reached</td>
+</tr>
+<tr>
+<td><code>set scr_dm_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>-1 is no respawn delay, 0 is automatic, &gt; 0 is X seconds</td>
+</tr>
+<tr>
+<td><code>set scr_dm_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per Player, 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_dm_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="domination-gametype-settings">Domination gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_dom_scorelimit &lt;int&gt;</code></td>
+<td>200</td>
+<td>0 - 99999</td>
+<td>Configure score limit to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_dom_timelimit &lt;int&gt;</code></td>
+<td>60</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn&#39;t reached</td>
+</tr>
+<tr>
+<td><code>set scr_dom_playerrespawndelay &lt;int&gt;</code></td>
+<td>-1</td>
+<td>-1 - 999</td>
+<td>-1 is no respawn delay, 0 is automatic, &gt; 0 is X seconds</td>
+</tr>
+<tr>
+<td><code>set scr_dom_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Duration in seconds before the first respawn in each round</td>
+</tr>
+<tr>
+<td><code>set scr_dom_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per Player, 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_dom_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>Rounds per game</td>
+</tr>
+<tr>
+<td><code>set scr_dom_winlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>Amount of wins needed to win a round-based game</td>
+</tr>
+<tr>
+<td><code>set scr_dom_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="demolition-gametype-settings">Demolition gametype Settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_dd_scorelimit &lt;int&gt;</code></td>
+<td>2</td>
+<td>0 - 99999</td>
+<td>Score limit needed to win</td>
+</tr>
+<tr>
+<td><code>set scr_dd_timelimit &lt;float&gt;</code></td>
+<td>2.5</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_dd_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>Rounds before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_dd_bombtimer &lt;float&gt;</code></td>
+<td>45</td>
+<td></td>
+<td>Time the bomb takes to detonate</td>
+</tr>
+<tr>
+<td><code>set scr_dd_defusetime &lt;float&gt;</code></td>
+<td>5</td>
+<td></td>
+<td>Time taken to defuse the bomb</td>
+</tr>
+<tr>
+<td><code>set scr_dd_extratime &lt;int&gt;</code></td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>set scr_dd_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Lives per player, 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_dd_planttime &lt;float&gt;</code></td>
+<td>5</td>
+<td>0 - 99</td>
+<td>Time it takes to plant a bomb in seconds</td>
+</tr>
+<tr>
+<td><code>set scr_dd_roundlimit &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 99</td>
+<td>Rounds the game is limited to, if there are no winners</td>
+</tr>
+<tr>
+<td><code>set scr_dd_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>-1 is no respawn delay, 0 is automatic, &gt; 0 is X seconds</td>
+</tr>
+<tr>
+<td><code>set scr_dd_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-and-destroy-gametype-settings">Search and destroy gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_sd_scorelimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99999</td>
+<td>Score limit required to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_sd_timelimit &lt;float&gt;</code></td>
+<td>2.5</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_sd_playerrespawndelay &lt;int&gt;</code></td>
+<td>-1</td>
+<td>-1 - 999</td>
+<td>-1 is no respawn delay, 0 is automatic, &gt; 0 is X seconds</td>
+</tr>
+<tr>
+<td><code>set scr_sd_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Delay for first respawn</td>
+</tr>
+<tr>
+<td><code>set scr_sd_numlives &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>Number of lives per player per game</td>
+</tr>
+<tr>
+<td><code>set scr_sd_roundlimit &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 99</td>
+<td>Rounds the game is limited to 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_sd_winlimit &lt;int&gt;</code></td>
+<td>4</td>
+<td>0 - 999</td>
+<td>amount of wins needed to win a round-based game</td>
+</tr>
+<tr>
+<td><code>set scr_sd_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>after X rounds, switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_sd_bombtimer &lt;int&gt;</code></td>
+<td>45</td>
+<td></td>
+<td>Time taken for the bomb to detonate</td>
+</tr>
+<tr>
+<td><code>set scr_sd_defusetime &lt;int&gt;</code></td>
+<td>5</td>
+<td></td>
+<td>Time taken to defuse the bomb</td>
+</tr>
+<tr>
+<td><code>set scr_sd_multibomb &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>allow multiple people to ‘have the bomb’</td>
+</tr>
+<tr>
+<td><code>set scr_sd_planttime &lt;int&gt;</code></td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>set scr_sd_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sabotage-gametype-settings">Sabotage gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_sab_scorelimit &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 99999</td>
+<td>Score limit to win the match</td>
+</tr>
+<tr>
+<td><code>set scr_sab_timelimit &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_sab_bombtimer &lt;int&gt;</code></td>
+<td>45</td>
+<td></td>
+<td>Duration in seconds the bomb takes to detonate</td>
+</tr>
+<tr>
+<td><code>set scr_sab_defusetime &lt;int&gt;</code></td>
+<td>5</td>
+<td></td>
+<td>Time taken to defuse the bomb</td>
+</tr>
+<tr>
+<td><code>set scr_sab_hotpotato &lt;int&gt;</code></td>
+<td>0</td>
+<td></td>
+<td>One bomb that the teams must fight over. One defending and one have to plant at the site.</td>
+</tr>
+<tr>
+<td><code>set scr_sab_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives players get</td>
+</tr>
+<tr>
+<td><code>set scr_sab_planttime &lt;int&gt;</code></td>
+<td>2.5</td>
+<td></td>
+<td>Time taken to plant the bomb</td>
+</tr>
+<tr>
+<td><code>set scr_sab_playerrespawndelay &lt;float&gt;</code></td>
+<td>7.5</td>
+<td>-1 - 999</td>
+<td>Time before respawn</td>
+</tr>
+<tr>
+<td><code>set scr_sab_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99</td>
+<td>Rounds per game</td>
+</tr>
+<tr>
+<td><code>set scr_sab_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>Rounds needed to be played before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_sab_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Time delay for first respawn before the game</td>
+</tr>
+<tr>
+<td><code>set scr_sab_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="capture-the-flag-gametype-settings">Capture the flag gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_ctf_scorelimit &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 99999</td>
+<td>Target score before the round ends</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_timelimit &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per player 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>Respawn wait in seconds</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99</td>
+<td>How many rounds match would last</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>Rounds before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_ctf_waverespawndelay &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Time delay for first respawn before the game</td>
+</tr>
+</tbody>
+</table>
+<h2 id="one-flag-gametype-settings">One flag gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_oneflag_scorelimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99999</td>
+<td>Target score before the round ends</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_timelimit &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 999</td>
+<td>Duration in minutes for the game to end if the score limit isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per player, 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>Respawn wait in seconds</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99</td>
+<td>How many rounds match would last</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>Rounds before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_oneflag_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+</tr>
+</tbody>
+</table>
+<h2 id="headquarters-gametype-settings">Headquarters gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>valid</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_koth_scorelimit &lt;int&gt;</code></td>
+<td>250</td>
+<td>0 - 99999</td>
+<td>Score limit to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_koth_timelimit &lt;int&gt;</code></td>
+<td>10</td>
+<td>0 - 999</td>
+<td>Duration in minutes the game will continue if the score isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_koth_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per game. 0 for unlimited.</td>
+</tr>
+<tr>
+<td><code>set scr_koth_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>Players respawn wait</td>
+</tr>
+<tr>
+<td><code>set scr_koth_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99</td>
+<td>Rounds to be played</td>
+</tr>
+<tr>
+<td><code>set scr_koth_roundswitch &lt;int&gt;</code></td>
+<td>1</td>
+<td></td>
+<td>Rounds to be played before teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_koth_winlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>Rounds per game</td>
+</tr>
+<tr>
+<td><code>set scr_koth_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>First respawn delay for each round</td>
+</tr>
+<tr>
+<td><code>set scr_koth_proMode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="arena-gametype-settings">Arena gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_arena_scorelimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99999</td>
+<td>Score limit to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_arena_timelimit &lt;float&gt;</code></td>
+<td>2.5</td>
+<td>0 - 999</td>
+<td>Duration in minutes the game will continue if the score isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_arena_numlives &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>Number of lives per game 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_arena_roundlimit &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 99</td>
+<td>Rounds to be played</td>
+</tr>
+<tr>
+<td><code>set scr_arena_roundswitch &lt;int&gt;</code></td>
+<td>3</td>
+<td></td>
+<td>Rounds before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_arena_winlimit &lt;int&gt;</code></td>
+<td>4</td>
+<td>0 - 999</td>
+<td>rounds per game</td>
+</tr>
+<tr>
+<td><code>set scr_arena_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="global-thermonuclear-war-gametype-settings">Global thermonuclear war gametype settings</h2>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set scr_gtnw_scorelimit &lt;int&gt;</code></td>
+<td>100</td>
+<td>0 - 99999</td>
+<td>Score limit to win the game</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_timelimit &lt;int&gt;</code></td>
+<td>6</td>
+<td>0 - 999</td>
+<td>Duration in minutes the game will continue if the score isn’t reached</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_numlives &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Number of lives per game, 0 for unlimited</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_playerrespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>-1 - 999</td>
+<td>Players respawn wait</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_roundlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 99</td>
+<td>Rounds to be played</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_roundswitch &lt;int&gt;</code></td>
+<td>0</td>
+<td></td>
+<td>Rounds before the teams switch sides</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_waverespawndelay &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>First respawn delay for each round</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_winlimit &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 999</td>
+<td>rounds per game</td>
+</tr>
+<tr>
+<td><code>set scr_gtnw_promode &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Extra bullet damage <em>unconfirmed</em></td>
+</tr>
+</tbody>
+</table>
+<p class="page" id="Advanced-party-server-configuration"></p><h1>Party server</h1>
+<p>This is how you configure your server to run as a party server.</p>
+<h2 id="server-config">Server config</h2>
+<p>This part of the configuration has to be done in the server.cfg file that your server is using. Please put your server configuration file in the <code>Players</code> folder in your MW2 root directory.</p>
+<p><a href="#Advanced-general-server-configuration">General</a> server configuration is required for general configuration options.</p>
+<h3 id="info">Info</h3>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set sv_hostname &lt;string&gt;</code></td>
+<td>&quot;IW4x Server&quot;</td>
+<td></td>
+<td>Sets the server hostname</td>
+</tr>
+<tr>
+<td><code>set sv_securityLevel &lt;int&gt;</code></td>
+<td>23</td>
+<td>0 - 256</td>
+<td>Configures the servers security level</td>
+</tr>
+<tr>
+<td><code>set sv_motd &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Sets a custom motd which is shown on the loadscreen when a player joins</td>
+</tr>
+<tr>
+<td><code>sets _Admin &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures admin name</td>
+</tr>
+<tr>
+<td><code>sets _Email &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures admin email</td>
+</tr>
+<tr>
+<td><code>sets _Website &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures website</td>
+</tr>
+<tr>
+<td><code>sets _Location &lt;string&gt;</code></td>
+<td></td>
+<td></td>
+<td>Configures location</td>
+</tr>
+</tbody>
+</table>
+<h3 id="non-gameplay-configuration">Non gameplay configuration</h3>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>valid</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set rcon_password &lt;string&gt;</code></td>
+<td>&quot;&quot;</td>
+<td></td>
+<td>Configures password for rcon</td>
+</tr>
+<tr>
+<td><code>set g_password &lt;string&gt;</code></td>
+<td>&quot;&quot;</td>
+<td></td>
+<td>Configures password for gameserver</td>
+</tr>
+<tr>
+<td><code>set g_inactivity &lt;int&gt;</code></td>
+<td>120</td>
+<td>0 - 999</td>
+<td>Enable auto kick feature for idle/AFK players</td>
+</tr>
+<tr>
+<td><code>set g_inactivitySpectator &lt;int&gt;</code></td>
+<td>180</td>
+<td>0 - 999</td>
+<td>Time in seconds before a spectator gets kicked</td>
+</tr>
+<tr>
+<td><code>set g_logSync &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>1 = always flush games_mp.log, 0 = only flush on game end</td>
+</tr>
+<tr>
+<td><code>set g_log &lt;string&gt;</code></td>
+<td>logs/games_mp.log</td>
+<td></td>
+<td>Configures gamelog filename</td>
+</tr>
+<tr>
+<td><code>set sv_allowClientConsole &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable players ability to access server commands</td>
+</tr>
+<tr>
+<td><code>set sv_maxPing &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 999</td>
+<td>Maximum ping allowed, any higher and players will get kicked</td>
+</tr>
+<tr>
+<td><code>set sv_timeout &lt;int&gt;</code></td>
+<td>20</td>
+<td>0 - 1800</td>
+<td>Timeout time period</td>
+</tr>
+<tr>
+<td><code>set sv_reconnectlimit &lt;int&gt;</code></td>
+<td>3</td>
+<td>0 - 1800</td>
+<td>How many times you can try to reconnect</td>
+</tr>
+<tr>
+<td><code>set sv_pure &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Verifying client files</td>
+</tr>
+<tr>
+<td><code>set sv_sayName &lt;string&gt;</code></td>
+<td>^7Console</td>
+<td></td>
+<td>Name server-side ‘say’ commands show up as</td>
+</tr>
+<tr>
+<td><code>set sv_floodProtect &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Chat Spam Protection</td>
+</tr>
+<tr>
+<td><code>set sv_kickBanTime &lt;int&gt;</code></td>
+<td>300</td>
+<td>0 - 3600</td>
+<td>Configures kick ban duration</td>
+</tr>
+<tr>
+<td><code>set scr_game_objectiveStreaks &lt;int&gt;</code></td>
+<td>1</td>
+<td>0 - 1</td>
+<td>Enable Chopper, AC130 and Nuke</td>
+</tr>
+<tr>
+<td><code>set scr_classic &lt;int&gt;</code></td>
+<td>0</td>
+<td>0 - 1</td>
+<td>Enable IW3 killstreak system</td>
+</tr>
+<tr>
+<td><code>set scr_intermission_time &lt;int&gt;</code></td>
+<td>30</td>
+<td>0 - 999</td>
+<td>Change timer before server loads the next map (currently broken)</td>
+</tr>
+</tbody>
+</table>
+<p>Required mod configuration has to be done in this file as well.</p>
+<h2 id="playlist-config">Playlist config</h2>
+<p>The following configuration has to be done in your playlist. Do not edit your <code>iw4x/playlist_default.info</code> file directly as this file is updated via the updater and will be resetted to defaults.</p>
+<p>Instead put your playlist in the <code>players</code> folder in your MW2 root directory.</p>
+<h3 id="general">General</h3>
+<p>Playlists are limited to 32 Gametypes and 23 playlists. It is possible to create multiple seperate playlists. A single server can only run a single playlist at a time.</p>
+<h3 id="function-script">Function script</h3>
+<p>In playlists you can use the following parameters to configure your game server:</p>
+<ul>
+<li><code>gametype &lt;string&gt;</code>: Unique name for your configured gametype. Everything until the next gametype configures your gametype. Eg.: <code>gametype tdm</code></li>
+<li><code>name &lt;string&gt; &quot;&lt;string&gt;&quot;</code>: Configures a specific localized name for the gametype which is shown to the user. Eg.: <code>name english &quot;Team Deathmatch&quot;</code></li>
+<li><code>script</code>: Gametype the game actually loads. Eg.: <code>script war</code></li>
+<li>More gametypes can be found <a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-general-server-configuration#supported-gametypes">here</a></li>
+<li><code>teambased</code>: Currently unknown</li>
+<li><code>hardcore</code>: Currently unknown</li>
+<li><code>rule &lt;string&gt; &lt;string&gt;</code>: Rule is used to customize dvars. Eg.: <code>rule scr_thirdperson 0</code></li>
+<li>For possible values you can check the options for your preferred gametype <a href="https://github.com/Jawesome99/IW4x/wiki/Advanced-match-server-configuration#server-config">here</a></li>
+</ul>
+<h3 id="playlist">Playlist</h3>
+<p>The first playlist in your file has to be <code>playlist 1</code>. To start this playlist on your server, you have to pass the parameter <code>+set playlist 0</code>.</p>
+<ul>
+<li><code>playlist &lt;int&gt;</code>: Configures playlist</li>
+<li><code>rule &lt;string&gt; &lt;string&gt;</code>: Overwrites rules configured in your function.</li>
+<li><code>&lt;mapname&gt;,&lt;gametype&gt;,&lt;mapweight&gt;</code>: Configures your playlist. Put every map you want in your map rotation on a seperate line. The higher the mapweight the more likely this map will be picked. Eg.: <code>mp_rust,tdm,4</code> or <code>mp_fuel2,tdm,1</code></li>
+</ul>
+<p class="page" id="Docker"></p><h1>Docker</h1>
+<p>It is possible to run an <strong>IW4x</strong> server on Linux as an container using Docker, but you will have to build the image by yourself.</p>
+<ul>
+<li><strong>Requirements</strong><ul>
+<li>Knowledge how to use Docker and Docker Compose</li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
+</li>
+</ul>
+<p>At first create a few folders</p>
+<pre class="hljs">$ mkdir -p iw4x-dedicated/image
+$ mkdir -p iw4x-dedicated/data
+$ <span class="hljs-built_in">cd</span> iw4x-dedicated/</pre><p>Then create the following file with the name <code>Dockerfile</code> inside of <code>iw4x-dedicated/image</code></p>
+<pre class="hljs"><span class="hljs-keyword">FROM</span> alpine:<span class="hljs-number">3.8</span>
+<span class="hljs-keyword">LABEL</span><span class="bash"> maintainer=<span class="hljs-string">"The IW4x Team"</span> \
+        com.iw4x.description=<span class="hljs-string">"Alpine based Wine environment for IW4x dedicated server."</span></span>
 
-    heli:setvehgoalpos(origin, <span class="hljs-number">1</span>)
-<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">ENV</span> LANG en_US.utf8
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup_helicopter</span><span class="hljs-params">(heli, player)</span></span>
-    heli:setturningability(<span class="hljs-number">1</span>)
-    heli:setspeed(<span class="hljs-number">40</span>, <span class="hljs-number">15</span>, <span class="hljs-number">5</span>)
-    heli:setcandamage(<span class="hljs-literal">false</span>)
+<span class="hljs-comment"># UID and GID of the iw4x user the server is running as.</span>
+<span class="hljs-keyword">ARG</span> USER_ID=<span class="hljs-number">1000</span>
+<span class="hljs-keyword">ARG</span> GROUP_ID=<span class="hljs-number">1000</span>
 
-    <span class="hljs-keyword">local</span> moveinterval = game:oninterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> move_helicopter(heli, player) <span class="hljs-keyword">end</span>, <span class="hljs-number">5000</span>)
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disconnect_callback</span><span class="hljs-params">()</span></span>
-        moveinterval:clear()
-        heli:delete()
-    <span class="hljs-keyword">end</span>
+<span class="hljs-comment"># This hack is necessary, because it is the only way to install 32-bit wine on 64-bit alpine.</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> <span class="hljs-built_in">echo</span> <span class="hljs-string">"x86"</span> &gt; /etc/apk/arch &amp;&amp;\
+        apk add --no-cache wine &amp;&amp;\
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">"x86_64"</span> &gt; /etc/apk/arch &amp;&amp;\
+        addgroup -g <span class="hljs-variable">${GROUP_ID}</span> iw4x &amp;&amp;\
+        adduser -h <span class="hljs-string">"/iw4x"</span> -G iw4x -D -u <span class="hljs-variable">${USER_ID}</span> iw4x</span>
 
-    player:onnotifyonce(<span class="hljs-string">"disconnect"</span>, disconnect_callback)
-<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">ENV</span> WINEARCH win32
+<span class="hljs-keyword">ENV</span> IW4X_PORT <span class="hljs-number">28960</span>
+<span class="hljs-keyword">ENV</span> IW4X_ARGS -dedicated +set net_port ${IW4X_PORT} +exec server.cfg +party_enable <span class="hljs-number">0</span> +sv_maxclients <span class="hljs-number">12</span> +map_rotate
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">spawn_helicopter</span><span class="hljs-params">(player)</span></span>
-    <span class="hljs-keyword">local</span> origin = player.origin;
-    <span class="hljs-keyword">local</span> angles = player.angles;
+<span class="hljs-keyword">USER</span> iw4x
+<span class="hljs-keyword">WORKDIR</span><span class="bash"> /iw4x</span>
 
-    origin.z = origin.z + <span class="hljs-number">1000.0</span>;
+<span class="hljs-keyword">RUN</span><span class="bash"> mkdir -p server</span>
 
-    <span class="hljs-keyword">local</span> heli = game:spawnhelicopter(player, origin, angles, <span class="hljs-string">"cobra_mp"</span>, <span class="hljs-string">"vehicle_battle_hind"</span>)
+<span class="hljs-keyword">COPY</span><span class="bash"> ./init.sh /iw4x/init.sh</span>
 
-    setup_helicopter(heli, player)
-<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">VOLUME</span><span class="bash"> [<span class="hljs-string">"/iw4x/server"</span>]</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">player_spawned</span><span class="hljs-params">(player)</span></span>
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Player spawned: "</span> .. player.name)
-    player:freezecontrols(<span class="hljs-literal">false</span>)
+<span class="hljs-keyword">EXPOSE</span> ${IW4X_PORT}/udp
+<span class="hljs-keyword">EXPOSE</span> ${IW4X_PORT}
 
-    spawn_helicopter(player)
-<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">CMD</span><span class="bash"> [<span class="hljs-string">"/bin/sh"</span>, <span class="hljs-string">"/iw4x/init.sh"</span>]</span></pre><p>And the following file with the name <code>init.sh</code> inside of <code>iw4x-dedicated/image</code></p>
+<pre class="hljs"><span class="hljs-comment">#!/bin/sh -e</span>
+<span class="hljs-built_in">cd</span> server/
+wine iw4x.exe <span class="hljs-variable">${IW4X_ARGS}</span></pre><p>Do not forget to make init.sh executeable</p>
+<pre class="hljs">$ chmod +x image/init.sh</pre><p>Now create a file called <code>docker-compose.yml</code> inside of <code>iw4x-dedicated</code> with the following content</p>
+<pre class="hljs"><span class="hljs-attr">version:</span> <span class="hljs-string">"3.7"</span>
+<span class="hljs-attr">services:</span>
+  <span class="hljs-attr">server:</span>
+    <span class="hljs-attr">build:</span>
+      <span class="hljs-attr">context:</span> <span class="hljs-string">"./image/"</span>
+      <span class="hljs-attr">args:</span>
+        <span class="hljs-comment"># You can change these matching the ids of your current user, except if you are root.</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">USER_ID=1000</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">GROUP_ID=1000</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">"iw4x:latest"</span>
+    <span class="hljs-comment"># Will auto-restart your server if it crashes.</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-comment"># Do not forget to adjust the ports section down below if chaning the port.</span>
+      <span class="hljs-attr">IW4X_PORT:</span> <span class="hljs-number">28960</span>
+      <span class="hljs-comment"># Here you can change the commandline arguments of your server.</span>
+      <span class="hljs-attr">IW4X_ARGS:</span> <span class="hljs-string">"-dedicated +set net_port ${IW4X_PORT} +exec server.cfg +party_enable 0 +sv_maxclients 12 +map_rotate"</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-comment"># Copy the whole dedicated server into iw4x-dedicated/data/ and make sure the files are owned by the values of ${USER_ID} and ${GROUP_ID}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"./data/:/iw4x/server/"</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"28960:28960/udp"</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"28960:28960"</span></pre><p>After you have copied the serverfiles into <code>iw4x-dedicated/data/</code> and have adjusted the file ownerships you can build your Docker image and start your server</p>
+<pre class="hljs">$ docker-compose build --compress --force-rm --no-cache --pull
+$ docker-compose up -d</pre><p>If you want to see the output of your server you can use</p>
+<pre class="hljs">$ docker-compose logs -f</pre><p class="page" id="IW4x-Server-API"></p><h1>IW4x Server API</h1>
+<p>IW4x dedicated servers have an api endpoint that you can use to get some information about the server. The currently implemented endpoints are documented here.</p>
+<h2 id="endpoints">Endpoints</h2>
+<ul>
+<li><code>/serverlist</code></li>
+<li><code>/info</code></li>
+<li><code>/list</code></li>
+<li><code>/map</code></li>
+</ul>
+<h2 id="serverlist">Serverlist</h2>
+<p>The <code>/serverlist</code> endpoint returns a json array of all known servers excluding itself. If you query your own server you will in most cases not get a single of your own hosted servers (as long as they are on the same IP). This is a limitation of how NAT works and cannot be fixed. As a workaround I suggest merging your own servers with the array.</p>
+<p>Example: <code>[&quot;x.x.x.x:28960&quot;, &quot;x.x.x.x:28960&quot;]</code></p>
+<h2 id="info">Info</h2>
+<p>The <code>/info</code> endpoint returns a json with the server&#39;s scoreboard and some server information.</p>
+<h2 id="list-map">List/Map</h2>
+<p>The <code>/list</code> &amp; <code>/map</code> endpoints are used in our implementation of the mod/map download. The files are downloaded from <code>/file/&lt;name&gt;</code>. You can only download active mods and maps from the server.</p>
+<p class="page" id="Gameserver-file-optimization"></p><h1>Gameserver file optimization</h1>
+<p>You can delete some files that are not needed when hosting a dedicated server. This will save some space on your hard drive, but is not necessary.</p>
+<p>The following files can be safely deleted:</p>
+<ul>
+<li><code>logo.bmp</code></li>
+<li><code>splash.bmp</code></li>
+<li><code>main\video</code></li>
+<li><code>main\iw_01.iwd</code></li>
+<li><code>main\iw_02.iwd</code></li>
+<li><code>main\iw_03.iwd</code></li>
+<li><code>main\iw_04.iwd</code></li>
+<li><code>main\iw_05.iwd</code></li>
+<li><code>main\iw_06.iwd</code></li>
+<li><code>main\iw_07.iwd</code></li>
+<li><code>main\iw_08.iwd</code></li>
+<li><code>main\iw_09.iwd</code></li>
+<li><code>main\iw_10.iwd</code></li>
+<li><code>main\iw_11.iwd</code></li>
+<li><code>main\iw_12.iwd</code></li>
+<li><code>main\iw_13.iwd</code></li>
+<li><code>main\iw_14.iwd</code></li>
+<li><code>main\iw_15.iwd</code></li>
+<li><code>main\iw_16.iwd</code></li>
+<li><code>main\iw_17.iwd</code></li>
+<li><code>main\iw_18.iwd</code></li>
+<li><code>main\iw_19.iwd</code></li>
+<li><code>main\iw_20.iwd</code></li>
+<li><code>main\iw_21.iwd</code></li>
+<li><code>main\iw_22.iwd</code></li>
+<li><code>main\iw_23.iwd</code></li>
+<li><code>main\iw_dlc4_01.iwd</code></li>
+<li><code>main\iw_dlc6_00.iwd</code></li>
+<li><code>main\iw_dlc7_00.iwd</code></li>
+<li><code>main\localized_english_iw00.iwd</code></li>
+<li><code>main\localized_english_iw01.iwd</code></li>
+<li><code>main\localized_english_iw02.iwd</code></li>
+<li><code>main\localized_english_iw03.iwd</code></li>
+<li><code>main\localized_english_iw04.iwd</code></li>
+<li><code>main\localized_english_iw05.iwd</code></li>
+<li><code>main\localized_english_iw06.iwd</code></li>
+<li><code>main\localized_english_iw07</code></li>
+<li><code>miles</code></li>
+<li><code>iw4x\video</code></li>
+<li><code>iw4x\iw4x_01.iwd</code></li>
+</ul>
+<p>The following files can safely be modified (open them with 7-Zip or WinRAR):</p>
+<p><strong><code>main\iw_00.iwd</code></strong><br>Delete everything inside the file except <code>fileSysCheck.cfg</code>.</p>
+<p><strong><code>main\iw_dlc3_00.iwd</code></strong><br>Inside the file delete the <code>images</code> and <code>sound</code> folder.</p>
+<p><strong><code>main\iw_dlc4_00.iwd</code></strong><br>Inside the file delete the <code>images</code> folder.</p>
+<p><strong><code>main\iw_dlc5_00.iwd</code></strong><br>Inside the file delete the <code>images</code> and <code>Sound</code> folder.</p>
+<p><strong><code>main\iw_dlc5_01.iwd</code></strong><br>Inside the file delete the <code>images</code> folder.</p>
+<p><strong><code>main\iw_dlc8_00.iwd</code></strong><br>Inside the file delete the <code>images</code> folder.</p>
+<p><strong><code>iw4x\iw4x_00.iwd</code></strong><br>Inside the file delete the <code>images</code> and <code>vision</code> folder.</p>
+<p class="page" id="List-of-map-names"></p><h1>List of map names</h1>
+<h2 id="basegame">Basegame</h2>
+<p><code>mp_afghan</code> - Afghan<br><code>mp_derail</code> - Derail<br><code>mp_estate</code> - Estate<br><code>mp_favela</code> - Favela<br><code>mp_highrise</code> - Highrise<br><code>mp_invasion</code> - Invasion<br><code>mp_checkpoint</code> - Karachi<br><code>mp_quarry</code>  - Quarry<br><code>mp_rundown</code>  - Rundown<br><code>mp_rust</code> - Rust<br><code>mp_boneyard</code> - Scrapyard<br><code>mp_nightshift</code> - Skidrow<br><code>mp_subbase</code> - Sub Base<br><code>mp_terminal</code> - Terminal<br><code>mp_underpass</code> - Underpass<br><code>mp_brecourt</code> - Wasteland  </p>
+<h2 id="dlc1-stimulus">DLC1 STIMULUS</h2>
+<p><code>mp_complex</code> - Bailout<br><code>mp_crash</code> - Crash<br><code>mp_overgrown</code> - Overgrown<br><code>mp_compact</code> - Salvage<br><code>mp_storm</code> - Storm  </p>
+<h2 id="dlc2-resurgence">DLC2 RESURGENCE</h2>
+<p><code>mp_abandon</code> - Carnival<br><code>mp_fuel2</code> - Fuel<br><code>mp_strike</code> - Strike<br><code>mp_trailerpark</code> - Trailer Park<br><code>mp_vacant</code> - Vacant  </p>
+<h2 id="dlc3-nuketown">DLC3 NUKETOWN</h2>
+<p><code>mp_nuked</code> - Nuketown  </p>
+<h2 id="dlc4-classics-1">DLC4 CLASSICS 1</h2>
+<p><code>mp_cross_fire</code> - Crossfire<br><code>mp_bloc</code> - Bloc<br><code>mp_cargoship</code> - Cargoship  </p>
+<h2 id="dlc5-classics-2">DLC5 CLASSICS 2</h2>
+<p><code>mp_killhouse</code> - Killhouse<br><code>mp_bog_sh</code> - Bog  </p>
+<h2 id="dlc6-freighter">DLC6 FREIGHTER</h2>
+<p><code>mp_cargoship_sh</code> - Freighter  </p>
+<h2 id="dlc7-resurrection">DLC7 RESURRECTION</h2>
+<p><code>mp_shipment_long</code> - Long:Shipment<br><code>mp_rust_long</code> - Long: Rust<br><code>mp_firingrange</code> - Firing Range  </p>
+<h2 id="dlc8-recycled">DLC8 RECYCLED</h2>
+<p><code>mp_storm_spring</code> - Chemical Plant<br><code>mp_fav_tropical</code> - Tropical: Favela<br><code>mp_estate_tropical</code> - Tropical: Estate<br><code>mp_crash_tropical</code> - Tropical: Crash<br><code>mp_bloc_sh</code> -  Forgotten City  </p>
+<h2 id="sp-maps-to-mp">SP MAPS to MP</h2>
+<p><code>oilrig</code> - Oilrig<br><code>iw4_credits</code> - Test map<br><code>co_hunted</code> - Village  </p>
+<p class="page" id="Mods"></p><h1>Mods</h1>
+<ul>
+<li><a href="#Create-a-mod">Create a mod</a></li>
+<li><a href="#Create-a-map">Create a map</a></li>
+</ul>
+<p class="page" id="Create-a-mod"></p><h1>Create a mod</h1>
+<p>Nothing here yet :(</p>
+<p class="page" id="Create-a-map"></p><h1>Create a map</h1>
+<p>This is how you create a custom map for IW4x.</p>
+<h2 id="requirements">Requirements</h2>
+<p>You have to fulfill the following requirements to be able to create a custom map for IW4x:</p>
+<ul>
+<li>A clean installation of <a href="http://store.steampowered.com/app/10180/">Call of Duty: Modern Warfare 2</a></li>
+<li>A clean installation of <a href="http://store.steampowered.com/app/7940/">Call of Duty 4: Modern Warfare</a></li>
+<li>The latest <a href="https://www.google.com/search?q=Call+of+Duty+4:+Modern+Warfare:+Mod-Tools">mod tools</a> for <em>Call of Duty 4</em></li>
+<li>The latest <strong>IW4x Client</strong> installed in your <em>Modern Warfare 2</em> directory</li>
+<li>The latest <strong>IW3 exporter</strong> installed in your <em>Call of Duty 4</em> directory</li>
+<li>The latest <a href="https://github.com/Jawesome99/IW4x/blob/master/files/mod%20tools.exe?raw=true"><strong>IW4x Mod-Builder</strong></a> and both your <em>Call of Duty 4</em> and <em>Modern Warfare 2</em> paths configured in the settings</li>
+</ul>
+<h2 id="create-a-map">Create a map</h2>
+<p>Creating a custom map requires to create a map for <em>Call of Duty 4</em> first.<br>For that you can follow various existing <a href="http://wiki.modsrepository.com/index.php?title=Call_of_Duty_4:_mapping_mp">tutorials</a>.<br>You can then follow the steps to convert your map for IW4x.</p>
+<h2 id="convert-a-map">Convert a map</h2>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Automatic conversion for now only works for multiplayer maps</li>
+<li>Your map might have a lot of bugs, map conversion is in an early alpha stage</li>
+<li>Once we update the tools, you might have to reconvert your map</li>
+</ul>
+<h3 id="conversion">Conversion</h3>
+<ul>
+<li>Open the <em>Build Map</em> tab in the <strong>IW4x Mod-Builder</strong></li>
+<li>You will see a list of maps if you correctly configured all paths:<ul>
+<li><strong>Stock Maps</strong> are the maps located in your <code>&lt;Call of Duty 4&gt;/zone/&lt;language&gt;/</code> directory</li>
+<li><strong>User Maps</strong> are the maps located in your <code>&lt;Call of Duty 4&gt;/usermaps/</code> directory</li>
+<li><strong>Other Maps</strong> are the maps you already converted, they will be in your <code>&lt;Modern Warfare 2&gt;/mods/</code> directory</li>
+</ul>
+</li>
+<li>Select the map you want to convert and click <em>Export COD4 Map</em>, this will export all required files into your <code>&lt;Modern Warfare 2&gt;/mods/</code> directory</li>
+<li>After the export, you can optionally edit the map’s CSV source<sup>[1]</sup> or edit the arena to change the name or teams of your map.</li>
+<li>Click on <code>Build MW2 Map</code> to create the map, it will be located in <code>&lt;Modern Warfare 2&gt;/usermaps/</code></li>
+<li>At this point, you are able to test your map by clicking <em>Run MW2 Map</em></li>
+</ul>
+<h3 id="deployment">Deployment</h3>
+<p>Once you followed all the steps for converting your map, you have to generate the IWD
+by clicking <em>Generate IWD</em> for the map you selected in the <strong>IW4x Mod-Builder</strong>. This will compress the images for your map.
+All required files should be located in <code>&lt;Modern Warfare 2&gt;/usermaps/&lt;your map&gt;/</code>.
+Those are all files you need, you can then run the map on your server or client using <code>map &lt;your map&gt;</code>.
+Players connecting to your server will automatically download all required ressources to play the map.</p>
+<p><sup>[1] Sometimes, you will get missing techset errors. This means you will need other dependency maps in your CSV. For now, as it is still hard to find the correct dependency, you can contact the IW4x staff on discord.</sup></p>
+<p class="page" id="Why-you-see-fewer-servers-than-others-on-IW4x"></p><h1>Seeing few servers</h1>
+<p>When playing IW4x you may notice the serverlist occasionally showing less servers or showing different amounts of servers for your friends.</p>
+<p>This is due to IW4x&#39;s decentralisation. Under normal circumstances you would receive a list of servers from one or multiple master servers, like so:<br><img src="https://i.imgur.com/psZZcbb.png"/><br>IW4x however uses a decentralized system in which servers directly inform the client of their presence and send their information, like so:<br><img src="https://i.imgur.com/EI09Eew.png"/><br>So instead of having one incoming connection delivering a server list, you have multiple, potentially hundreds of simultaneous incoming connections sending information to your client.</p>
+<h3 id="so-why-does-this-cause-problems-">So why does this cause problems?</h3>
+<p>Seeing few servers is almost always a problem of your router; old, low-end routers may not be able to handle the amount of incoming connections at once, some might even crash due to that; newer, high-end routers may see the amount of incoming connections as a <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS</a> attempt, therefore blocking them.<br>This will cause servers to not appear. IW4x developers attempted to fix this by slowing down the requests, spreading them out over a longer time period, this is where the Dvars <code>net_serverQueryLimit</code> and <code>net_serverFrames</code> come in.</p>
+<p><code>net_serverQueryLimit</code> defines how many servers are queried per query frame. A higher number means more servers simultaneously sending their information to you. A value of <code>10</code> will mean that ten servers are sending their information to you per query frame.<br><code>net_serverFrames</code> defines the amount of query frames per second. A value of <code>1</code> will mean that there is only one query frame per real time second.<br>Together, these two Dvars form a formula you can use to calculate the amount of servers being queried per second:<br><code>(value of serverQueryLimit) * (value of serverFrames) / 1 second</code><br>The default values for these Dvars using the fix DLL file are 10 each. This means that there are <code>10 * 10 / 1 second = 100 servers / second</code> requested. The values are higher without the DLL.<br>Values of <code>3</code> on each will mean that there are <code>3 * 3 / 1 second = 9 servers / second</code> requested, significantly lowering the amount of incoming connections and helping with the server list.</p>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">player_connected</span><span class="hljs-params">(player)</span></span>
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Player connected: "</span> .. player.name)
-
-    player:onnotifyonce(<span class="hljs-string">"spawned_player"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> player_spawned(player) <span class="hljs-keyword">end</span>)
-<span class="hljs-keyword">end</span>
-
-level:onnotify(<span class="hljs-string">"connected"</span>, player_connected)</pre><h1 id="file-structure">File structure</h1>
-<p>All scripts need to be placed in the <code>iw6x/scripts</code> folder in your Call of Duty: Ghosts installation folder.<br>You will need to create a folder for your script, for example <code>my_script</code>. The main entrypoint is always the <code>__init__.lua</code> file in there.</p>
-<p>The structure should be like this:</p>
-<pre class="hljs"><span class="hljs-selector-tag">COD</span> <span class="hljs-selector-tag">Ghosts</span>
-├── <span class="hljs-selector-tag">iw6x</span>
-│   ├── <span class="hljs-selector-tag">scripts</span>
-│   │   ├── <span class="hljs-selector-tag">my_script</span>
-│   │   │   ├── __<span class="hljs-selector-tag">init__</span><span class="hljs-selector-class">.lua</span>
-│   │   │   └── <span class="hljs-selector-tag">other_script</span><span class="hljs-selector-class">.lua</span>
-│   │   ├── <span class="hljs-selector-tag">my_next_script</span>
-│   │   │   ├── __<span class="hljs-selector-tag">init__</span><span class="hljs-selector-class">.lua</span>
-│   │   │   └── <span class="hljs-selector-tag">script</span><span class="hljs-selector-class">.lua</span>
-└── <span class="hljs-selector-tag">iw6x</span><span class="hljs-selector-class">.exe</span></pre><p>To load another script, you can use the <code>include</code> function.<br>If you want tofor example include <code>other_script.lua</code>, use it like this:</p>
-<pre class="hljs">include(<span class="hljs-string">"other_script"</span>)
-<span class="hljs-comment">-- [...]</span></pre><h1 id="types">Types</h1>
-<p>There are only 5 distinct types needed to interact with game&#39;s scripting environment.<br>LUA of course has more types, but what is meant by this is the following:<br>When dealing with events, functions or fields, no complex LUA types are supported, only these primitive types:</p>
-<h2 id="strings">Strings</h2>
-<p>Strings are text enclosed by quotes: <code>&quot;Hello World&quot;</code>.
-There is not much to say about them, as they are a common concept.</p>
-<h2 id="integer">Integer</h2>
-<p>Integers are all whole numbers like <code>0</code>, <code>1000</code> or <code>-15</code>.<br>Boolean values, so <code>true</code> and <code>false</code>, also fall under that category and are handled as <code>1</code> and <code>0</code> respectively.</p>
-<h2 id="float">Float</h2>
-<p>Floating point values are all numbers like <code>1.05</code> or <code>-10.5</code>.<br><code>1.0</code> is also a floating point number literal. This is due to the dot notation, even though it&#39;s technically a whole number.</p>
-<h2 id="vector">Vector</h2>
-<p>A vector is a type that groups exactly 3 floating point components.
-It is used to represent coordinates, angles or colors in the game.</p>
-<p>Creating a new vector can be done like this:</p>
-<pre class="hljs"><span class="hljs-keyword">local</span> my_vector = vector:new(<span class="hljs-number">1.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">3.0</span>)
-
-<span class="hljs-comment">-- Statements below will be true</span>
-<span class="hljs-built_in">assert</span>(my_vector.x == <span class="hljs-number">1.0</span>)
-<span class="hljs-built_in">assert</span>(my_vector.y == <span class="hljs-number">2.0</span>)
-<span class="hljs-built_in">assert</span>(my_vector.z == <span class="hljs-number">3.0</span>)</pre><p>You can access the individual components using either <code>x</code>, <code>y</code> and <code>z</code> property accessors, or <code>r</code>, <code>g</code> and <code>b</code> (note that both notations are equivalent, meaning <code>x</code> ≘ <code>r</code>, <code>y</code> ≘ <code>g</code> and <code>z</code> ≘ <code>b</code>).</p>
-<pre class="hljs"><span class="hljs-keyword">local</span> my_vector = vector:new() <span class="hljs-comment">-- vector is initialized as (0.0, 0.0, 0.0)</span>
-my_vector.x = <span class="hljs-number">5.0</span>
-my_vector.y = <span class="hljs-number">1.0</span>
-my_vector.z = <span class="hljs-number">2.0</span>
-
-<span class="hljs-keyword">local</span> val1 = my_vector.x <span class="hljs-comment">-- val1 is 5.0</span>
-<span class="hljs-keyword">local</span> val2 = my_vector.r <span class="hljs-comment">-- val2 is also 5.0, as x and r are equivalent</span>
-
-<span class="hljs-comment">-- The statements below are always true</span>
-<span class="hljs-built_in">assert</span>(my_vector.y == my_vector.g)
-<span class="hljs-built_in">assert</span>(my_vector.z == my_vector.b)</pre><h2 id="entity">Entity</h2>
-<p>Entities represent &#39;things&#39; that &#39;exist&#39; in the game. Players are for example entities.<br>Vehicles, hud elements, or the <code>level</code> are also entites.
-They can fire events, but also call functions into the game&#39;s scripting environment.
-Some entites also have certain fields (or properties), like an <code>origin</code> or a <code>name</code>.</p>
-<h1 id="events">Events</h1>
-<p>Entites can fire events.
-The concept was previously known as <code>notify</code> and <code>waittill</code> in GSC.<br>Popular events are the <code>connected</code> event fired by the <code>level</code>, or the <code>spawned_player</code> event fired by players.</p>
-<h2 id="listening">Listening</h2>
-<p>You can listen to any of these events by calling either <code>onnotify</code> or <code>onnotifyonce</code> on an entity:</p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">player_connected</span><span class="hljs-params">(player)</span></span>
-  <span class="hljs-comment">-- [...]</span>
-<span class="hljs-keyword">end</span>
-
-level:onnotify(<span class="hljs-string">"connected"</span>, player_connected)</pre><p>In the example above, the <code>player_connected</code> callback is called every time a player connects.
-If you don&#39;t want to be notified every time, you can use <code>onnotifyonce</code> instead, which only fires once.</p>
-<p>If you called <code>onnotify</code> (or <code>onnotifyonce</code>), but want to stop listening for notifications, you can call <code>clear</code> on the object is returned:</p>
-<pre class="hljs"><span class="hljs-comment">-- [...]</span>
-
-<span class="hljs-keyword">local</span> listener = level:onnotify(<span class="hljs-string">"connected"</span>, player_connected)
-
-<span class="hljs-comment">-- [...]</span>
-
-listener:clear() <span class="hljs-comment">-- stops listening for the 'connected' event</span></pre><p>Events can carry arguments. For example the <code>connected</code> event by the <code>level</code> carries the connecting player as an argument.
-You can get these arguments by adding paramters to the callback functions, as seen in the <code>player_connected</code> callback above.</p>
-<h2 id="firing">Firing</h2>
-<p>To fire events, you can call the <code>notify</code> function on an entity: </p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">player_connected</span><span class="hljs-params">(player)</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">my_callback</span><span class="hljs-params">()</span></span>
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Yay"</span>)
-  <span class="hljs-keyword">end</span>
-
-  player:onnotify(<span class="hljs-string">"my_cool_event"</span>, my_callback)
-
-  <span class="hljs-comment">-- [...]</span>
-
-  <span class="hljs-comment">-- This fires the 'my_cool_event' event</span>
-  player:notify(<span class="hljs-string">"my_cool_event"</span>)
-<span class="hljs-keyword">end</span></pre><p>You can also pass arguments to the event (there can be any amount, but they must be instances of one of the 5 primitive types):</p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">player_connected</span><span class="hljs-params">(player)</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">my_callback</span><span class="hljs-params">(arg1, arg2)</span></span>
-    <span class="hljs-built_in">print</span>(arg1 .. <span class="hljs-string">" "</span> .. arg2)
-  <span class="hljs-keyword">end</span>
-
-  player:onnotify(<span class="hljs-string">"my_cool_event"</span>, my_callback)
-
-  <span class="hljs-comment">-- [...]</span>
-
-  <span class="hljs-comment">-- This fires the 'my_cool_event' event</span>
-  player:notify(<span class="hljs-string">"my_cool_event"</span>, <span class="hljs-string">"Hello"</span>, <span class="hljs-string">"World"</span>)
-<span class="hljs-keyword">end</span></pre><h1 id="timers">Timers</h1>
-<p>Timers are required to delay the execution. GSC had a function called <code>wait</code>, which paused the execution of a thread for a specific amount of time.<br>Due to the control flow being different in LUA, there are neither threads, nor is there a wait function.</p>
-<p>However, you can do something else to delay the execution. The functions <code>ontimeout</code> and <code>oninterval</code>, which need to be called on the <code>game</code> object, allow to do that. They take two arguments, a callback and a time to wait in milliseconds.</p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span><span class="hljs-params">()</span></span>
-  <span class="hljs-comment">-- [...]</span>
-<span class="hljs-keyword">end</span>
-
-game:ontimeout(callback, <span class="hljs-number">1000</span>)</pre><p>Similar to the functions <code>setTimeout</code> and <code>setInterval</code> known from JavaScript, <code>ontimeout</code> executes the callback exactly once and <code>oninterval</code> executes it every time the given amount of time passes.</p>
-<p>You might want to cancel a timeout or an interval. This can be done exactly like it works for events.<br>Both <code>ontimeout</code> and <code>oninterval</code> return a timer with a <code>clear</code> method:</p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span><span class="hljs-params">()</span></span>
-  <span class="hljs-comment">-- [...]</span>
-<span class="hljs-keyword">end</span>
-
-<span class="hljs-keyword">local</span> timer = game:oninterval(callback, <span class="hljs-number">1000</span>)
-
-<span class="hljs-comment">-- [...]</span>
-
-timer:clear()</pre><p>Timer callbacks don&#39;t take any arguments. If you want to pass an object, like a player, to a callback, you have to capture it, in a lambda for example:</p>
-<pre class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">do_something</span><span class="hljs-params">(player)</span></span>
-  <span class="hljs-comment">-- [...]</span>
-<span class="hljs-keyword">end</span>
-
-<span class="hljs-comment">-- [...]</span>
-
-<span class="hljs-keyword">local</span> player = <span class="hljs-comment">-- [...]</span>
-game:oninterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> do_something(player) <span class="hljs-keyword">end</span>, <span class="hljs-number">1000</span>)</pre><h1 id="functions">Functions</h1>
-<p>The game provides a set of global functions and entity methods.<br>The functions provided are pretty much the same as COD4 had them.<br>You can have a look at a COD4 scripting reference: <a href="https://znation.nl/cod4script/">https://znation.nl/cod4script/</a> (libcod category doesn&#39;t exist in IW6x!)<br>Also note that all functions and methods are lowercase in IW6x!</p>
-<p>Global functions are functions that don&#39;t need an entity to work. They need to be called on the <code>game</code> object.<br>In the COD4 scripting reference, these functions don&#39;t have a <code>Call this on:</code> paragraph.<br>Here is an example:  </p>
-<pre class="hljs">game:ambientplay(<span class="hljs-string">"embient_mp_highrise"</span>);</pre><p>There are also member functions. These do have a paragraph called <code>Call this on:</code> in the COD4 reference.
-Here is an example:</p>
-<pre class="hljs">player:freezecontrols(<span class="hljs-literal">false</span>)</pre><p>For a list of all functions and methods available in IW6x, you can have a look at the source code:<br><a href="https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp">https://github.com/XLabsProject/iw6x-client/blob/develop/src/client/game/scripting/function_tables.cpp</a></p>
-<h1 id="fields">Fields</h1>
-<p>Entities do have fields (or properties).<br>They differ for each type of entity. For example players have fields like <code>name</code>, <code>origin</code> or <code>angles</code> and hud elements have fields like <code>x</code>, <code>y</code> or <code>alpha</code>.<br>You can get and set them like this (only the 5 primitive types are supported):</p>
-<pre class="hljs"><span class="hljs-keyword">local</span> playername = player.name
-player.origin = vector:new()</pre><p>Creating new properties or fields does not work yet, so you can&#39;t store own data in an entity.<br>You have to create your own construct for that.</p>
-<p>Additionally, there is no complete list of which fields exist. <code>level.players</code> is not a field for example. This was a variable.<br>So not every variable that existed in GSC is available as a field in here. </p>
-<h1 id="command-execution">Command execution</h1>
-<p>Unlike in GSC, the scripting API allows to execute console commands (for versions &gt; v1.1.0).<br>You can use the <code>executecommand</code> function on the <code>game</code> object like this:</p>
-<pre class="hljs">game:executecommand(<span class="hljs-string">"map mp_prisonbreak"</span>)</pre><h1 id="noteworthy-things">Noteworthy things</h1>
-<p>Players can disconnect. It might sound obvious, but is important for scripting.<br>Executing functions on a player that doesn&#39;t exist won&#39;t work. Additionally, captured player objects need to be freed.</p>
-<p>GSC used to have a function called <code>endon</code>, which allowed to terminate a thread as soon as an event happend, for example <code>player endon(&quot;disconnect&quot;)</code>
-stopped the execution, when a player disconnected.</p>
-<p>There is no such concept in IW6x. You will need to work with a combination of clearing timers and <code>onnotifyonce</code>, like this:</p>
-<pre class="hljs">
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">do_something</span><span class="hljs-params">()</span></span>
-  <span class="hljs-comment">-- [...]</span>
-<span class="hljs-keyword">end</span>
-
-<span class="hljs-keyword">local</span> timer = game:oninterval(do_something, <span class="hljs-number">1000</span>)
-
-  <span class="hljs-comment">-- [...]</span>
-
-player:onnotifyonce(<span class="hljs-string">"disconnect"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span> timer:clear() <span class="hljs-keyword">end</span>)
-</pre>
         </div> <!-- /div.col-md-9 -->
       </div> <!-- /div.row -->
     </div> <!-- /div.container -->
@@ -896,9 +2636,10 @@ player:onnotifyonce(<span class="hljs-string">"disconnect"</span>, <span class="
   <script>
     $('body').scrollspy({ target: '#scroll-spy', offset: 40 })
   </script>
-</html><!--
-     FILE ARCHIVED ON 16:32:16 Apr 18, 2021 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:38:53 May 24, 2023.
+</html>
+<!--
+     FILE ARCHIVED ON 22:56:04 Mar 30, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:38:27 May 24, 2023.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -906,13 +2647,13 @@ player:onnotifyonce(<span class="hljs-string">"disconnect"</span>, <span class="
 -->
 <!--
 playback timings (ms):
-  captures_list: 685.006
-  exclusion.robots: 0.135
-  exclusion.robots.policy: 0.124
-  RedisCDXSource: 30.311
-  esindex: 0.011
-  LoadShardBlock: 637.059 (3)
-  PetaboxLoader3.datanode: 655.297 (5)
-  load_resource: 298.021 (2)
-  PetaboxLoader3.resolve: 200.32 (2)
+  captures_list: 187.82
+  exclusion.robots: 0.121
+  exclusion.robots.policy: 0.112
+  RedisCDXSource: 18.51
+  esindex: 0.01
+  LoadShardBlock: 151.89 (3)
+  PetaboxLoader3.datanode: 160.062 (4)
+  load_resource: 82.324
+  PetaboxLoader3.resolve: 30.649
 -->
